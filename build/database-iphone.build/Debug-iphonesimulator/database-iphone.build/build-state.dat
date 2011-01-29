@@ -1,7 +1,7 @@
 Tdatabase-iphone
 v7
 r0
-t318029027.973688
+t318034493.984175
 cCheck dependencies
 cProcessInfoPlistFile /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/Info.plist database_iphone-Info.plist
 cCompileXIB /Users/maxsilver/Documents/database-iphone/MainWindow.xib
@@ -61,17 +61,17 @@ t1287719385
 s601120
 
 N/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.h
-c000000004D447D50000000000000019E
-t1296334160
-s414
+c000000004D4494840000000000000311
+t1296340100
+s785
 i<UIKit/UIKit.h>
 i<sqlite3.h>
 i"database_iphoneAppDelegate.h"
 
 N/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m
-c000000004D4480F20000000000001B52
-t1296335090
-s6994
+c000000004D449ABC00000000000023C6
+t1296341692
+s9158
 i"RootViewController.h"
 
 N/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.h
@@ -99,11 +99,11 @@ t1296330514
 s17498
 
 N/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app
-t1296336227
+t1296341693
 s306
 
 N/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app.dSYM
-t1296336227
+t1296341693
 s102
 
 N/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/Info.plist
@@ -127,16 +127,16 @@ t1296335550
 s4096
 
 N/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/data_new.sqlite
-t1296335609
+t1296338086
 s4096
 
 N/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone
-t1296336227
-s24992
+t1296341693
+s31044
 
 N/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/RootViewController.o
-t1296335096
-s55348
+t1296341693
+s67688
 
 N/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/database-iphone.LinkFileList
 c000000004D4473BB00000000000001CE
@@ -144,7 +144,7 @@ t1296331707
 s462
 
 N/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/database_iphoneAppDelegate.o
-t1296336227
+t1296340125
 s58924
 
 N/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/main.o
@@ -157,8 +157,8 @@ t1296335533
 s4096
 
 N/Users/maxsilver/Documents/database-iphone/data_new.sqlite
-c000000004D4482AD0000000000001000
-t1296335533
+c000000004D448C2C0000000000001000
+t1296337964
 s4096
 
 N/Users/maxsilver/Documents/database-iphone/database_iphone_Prefix.pch
@@ -186,11 +186,11 @@ s909
 
 CCheck dependencies
 r0
-lSLF07#2@18"Check dependencies318029027#318029027#0(0"0(0#1#0"8635748128#0"0#
+lSLF07#2@18"Check dependencies318034493#318034493#0(0"0(0#1#0"8632640864#0"0#
 
 CCompileC build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/RootViewController.o /Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s318027896.663820
-e318027896.827429
+s318034493.742944
+e318034493.934060
 r1
 xCompileC
 xbuild/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/RootViewController.o
@@ -207,11 +207,14 @@ o/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:23: war
 o/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:23: warning: initialization from incompatible pointer type
 o/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:29: warning: 'cString' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:371)
 o/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:29: warning: initialization discards qualifiers from pointer target type
-lSLF07#2@79"Compile /Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318027896#318027896#0(1202"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m: In function '-[RootViewController initializeTableData]':/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:23: warning: 'database_iphoneAppDelegate' may not respond to '+getNewDBConnection'/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:23: warning: (Messages without a matching method signature/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:23: warning: will be assumed to return 'id' and accept/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:23: warning: '...' as arguments.)/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:23: warning: initialization from incompatible pointer type/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:29: warning: 'cString' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:371)/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:29: warning: initialization discards qualifiers from pointer target type5(22@69"'database_iphoneAppDelegate' may not respond to '+getNewDBConnection'318027896#130#155#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318027890#23#0#23#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)318027896#285#131#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318027890#23#0#23#0#0"0(22@45"Initialization from incompatible pointer type318027896#649#131#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318027890#23#0#23#0#45"initialization from incompatible pointer type0(22@191"'cString' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:371)318027896#780#277#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318027890#29#0#29#0#33"'*' is deprecated (declared at *)0(22@59"Initialization discards qualifiers from pointer target type318027896#1057#145#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318027890#29#0#29#0#0"0(0#0#71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m8628710528#2154"    cd /Users/maxsilver/Documents/database-iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-generated-files.hmap -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-own-target-headers.hmap -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-all-target-headers.hmap -iquote /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-project-headers.hmap -F/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator -I/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/include -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/DerivedSources/i386 -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/DerivedSources -include /var/folders/yd/ydeuU3HUF18Vh0jwGx5LCk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/database_iphone_Prefix-hhbczrhmrzaisidqikbsgohwhpdb/database_iphone_Prefix.pch -c /Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m -o /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/RootViewController.o0#
+o/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m: At top level:
+o/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:327: warning: property 'dataSource' requires method '-dataSource' to be defined - use @synthesize, @dynamic or provide a method implementation
+o/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:327: warning: property 'dataSource' requires the method 'setDataSource:' to be defined - use @synthesize, @dynamic or provide a method implementation
+lSLF07#2@79"Compile /Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318034493#318034493#0(1726"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m: In function '-[RootViewController initializeTableData]':/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:23: warning: 'database_iphoneAppDelegate' may not respond to '+getNewDBConnection'/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:23: warning: (Messages without a matching method signature/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:23: warning: will be assumed to return 'id' and accept/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:23: warning: '...' as arguments.)/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:23: warning: initialization from incompatible pointer type/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:29: warning: 'cString' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:371)/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:29: warning: initialization discards qualifiers from pointer target type/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m: At top level:/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:327: warning: property 'dataSource' requires method '-dataSource' to be defined - use @synthesize, @dynamic or provide a method implementation/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m:327: warning: property 'dataSource' requires the method 'setDataSource:' to be defined - use @synthesize, @dynamic or provide a method implementation8(22@69"'database_iphoneAppDelegate' may not respond to '+getNewDBConnection'318034493#130#155#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318034492#23#0#23#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)318034493#285#131#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318034492#23#0#23#0#0"0(22@45"Initialization from incompatible pointer type318034493#649#131#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318034492#23#0#23#0#45"initialization from incompatible pointer type0(22@191"'cString' is deprecated (declared at /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/NSString.h:371)318034493#780#277#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318034492#29#0#29#0#33"'*' is deprecated (declared at *)0(22@59"Initialization discards qualifiers from pointer target type318034493#1057#145#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318034492#29#0#29#0#0"0(23@13"At top level:318034493#1202#87#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318034492#0#0#0#0#0"0(22@128"Property 'dataSource' requires method '-dataSource' to be defined - use @synthesize, @dynamic or provide a method implementation318034493#1289#215#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318034492#327#0#327#0#0"0(22@135"Property 'dataSource' requires the method 'setDataSource:' to be defined - use @synthesize, @dynamic or provide a method implementation318034493#1504#222#0(6@71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m318034492#327#0#327#0#0"0(0#0#71"/Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m8636311040#2154"    cd /Users/maxsilver/Documents/database-iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-generated-files.hmap -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-own-target-headers.hmap -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-all-target-headers.hmap -iquote /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-project-headers.hmap -F/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator -I/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/include -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/DerivedSources/i386 -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/DerivedSources -include /var/folders/yd/ydeuU3HUF18Vh0jwGx5LCk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/database_iphone_Prefix-hhbczrhmrzaisidqikbsgohwhpdb/database_iphone_Prefix.pch -c /Users/maxsilver/Documents/database-iphone/Classes/RootViewController.m -o /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/RootViewController.o0#
 
 CCompileC build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/database_iphoneAppDelegate.o /Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
-s318029027.704500
-e318029027.919545
+s318032925.131040
+e318032925.318546
 r1
 xCompileC
 xbuild/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/database_iphoneAppDelegate.o
@@ -225,7 +228,7 @@ o/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m
 o/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m:25: warning: (Messages without a matching method signature
 o/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m:25: warning: will be assumed to return 'id' and accept
 o/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m:25: warning: '...' as arguments.)
-lSLF07#2@87"Compile /Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m318029027#318029027#0(738"/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m: In function '-[database_iphoneAppDelegate application:didFinishLaunchingWithOptions:]':/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m:25: warning: 'database_iphoneAppDelegate' may not respond to '-createEditableCopyOfDatabaseIfNeeded'/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m:25: warning: (Messages without a matching method signature/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m:25: warning: will be assumed to return 'id' and accept/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m:25: warning: '...' as arguments.)2(22@87"'database_iphoneAppDelegate' may not respond to '-createEditableCopyOfDatabaseIfNeeded'318029027#169#181#0(6@79"/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m318029026#25#0#25#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)318029027#350#139#0(6@79"/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m318029026#25#0#25#0#0"0(0#0#79"/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m8633082304#2170"    cd /Users/maxsilver/Documents/database-iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-generated-files.hmap -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-own-target-headers.hmap -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-all-target-headers.hmap -iquote /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-project-headers.hmap -F/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator -I/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/include -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/DerivedSources/i386 -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/DerivedSources -include /var/folders/yd/ydeuU3HUF18Vh0jwGx5LCk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/database_iphone_Prefix-hhbczrhmrzaisidqikbsgohwhpdb/database_iphone_Prefix.pch -c /Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m -o /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/database_iphoneAppDelegate.o0#
+lSLF07#2@87"Compile /Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m318032925#318032925#0(738"/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m: In function '-[database_iphoneAppDelegate application:didFinishLaunchingWithOptions:]':/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m:25: warning: 'database_iphoneAppDelegate' may not respond to '-createEditableCopyOfDatabaseIfNeeded'/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m:25: warning: (Messages without a matching method signature/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m:25: warning: will be assumed to return 'id' and accept/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m:25: warning: '...' as arguments.)2(22@87"'database_iphoneAppDelegate' may not respond to '-createEditableCopyOfDatabaseIfNeeded'318032925#169#181#0(6@79"/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m318029026#25#0#25#0#26"'*' may not respond to '*'0(13@108"(Messages without a matching method signature will be assumed to return 'id' and accept '...' as arguments.)318032925#350#139#0(6@79"/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m318029026#25#0#25#0#0"0(0#0#79"/Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m8615143040#2170"    cd /Users/maxsilver/Documents/database-iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-generated-files.hmap -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-own-target-headers.hmap -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-all-target-headers.hmap -iquote /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-project-headers.hmap -F/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator -I/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/include -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/DerivedSources/i386 -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/DerivedSources -include /var/folders/yd/ydeuU3HUF18Vh0jwGx5LCk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/database_iphone_Prefix-hhbczrhmrzaisidqikbsgohwhpdb/database_iphone_Prefix.pch -c /Users/maxsilver/Documents/database-iphone/Classes/database_iphoneAppDelegate.m -o /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/database_iphoneAppDelegate.o0#
 
 CCompileC build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/main.o /Users/maxsilver/Documents/database-iphone/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
 s318024508.466247
@@ -266,32 +269,32 @@ xdata.sqlite
 lSLF07#2@16"Copy data.sqlite318028350#318028350#0(0"0(0#0#54"/Users/maxsilver/Documents/database-iphone/data.sqlite8631733568#489"    cd /Users/maxsilver/Documents/database-iphone    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/maxsilver/Documents/database-iphone/data.sqlite /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app0#
 
 CCpResource build/Debug-iphonesimulator/database-iphone.app/data_new.sqlite data_new.sqlite
-s318028409.605763
-e318028409.610988
+s318030886.092702
+e318030886.101336
 r1
 xCpResource
 xbuild/Debug-iphonesimulator/database-iphone.app/data_new.sqlite
 xdata_new.sqlite
-lSLF07#2@20"Copy data_new.sqlite318028409#318028409#0(0"0(0#0#58"/Users/maxsilver/Documents/database-iphone/data_new.sqlite8627204992#493"    cd /Users/maxsilver/Documents/database-iphone    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/maxsilver/Documents/database-iphone/data_new.sqlite /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app0#
+lSLF07#2@20"Copy data_new.sqlite318030886#318030886#0(0"0(0#0#58"/Users/maxsilver/Documents/database-iphone/data_new.sqlite8635945184#493"    cd /Users/maxsilver/Documents/database-iphone    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/maxsilver/Documents/database-iphone/data_new.sqlite /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app0#
 
 CGenerateDSYMFile /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app.dSYM /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone
-s318029027.950967
-e318029027.970706
+s318034493.964874
+e318034493.981390
 r1
 xGenerateDSYMFile
 x/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app.dSYM
 x/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone
-lSLF07#2@133"GenerateDSYMFile build/Debug-iphonesimulator/database-iphone.app.dSYM build/Debug-iphonesimulator/database-iphone.app/database-iphone318029027#318029027#0(0"0(0#0#106"/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone8633731232#419"    cd /Users/maxsilver/Documents/database-iphone    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone -o /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app.dSYM0#
+lSLF07#2@133"GenerateDSYMFile build/Debug-iphonesimulator/database-iphone.app.dSYM build/Debug-iphonesimulator/database-iphone.app/database-iphone318034493#318034493#0(0"0(0#0#106"/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone8632496000#419"    cd /Users/maxsilver/Documents/database-iphone    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone -o /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app.dSYM0#
 
 CLd /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone normal i386
-s318029027.919630
-e318029027.950864
+s318034493.934148
+e318034493.964783
 r1
 xLd
 x/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone
 xnormal
 xi386
-lSLF07#2@111"Link /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone318029027#318029027#0(0"0(0#0#0"8636341440#972"    cd /Users/maxsilver/Documents/database-iphone    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator -F/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator -filelist /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/database-iphone.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -lsqlite3.0 -o /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone0#
+lSLF07#2@111"Link /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone318034493#318034493#0(0"0(0#0#0"8632765440#972"    cd /Users/maxsilver/Documents/database-iphone    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator -F/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator -filelist /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/Objects-normal/i386/database-iphone.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -lsqlite3.0 -o /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/database-iphone0#
 
 CProcessInfoPlistFile /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app/Info.plist database_iphone-Info.plist
 s318024507.009151
@@ -316,10 +319,10 @@ xcom.apple.compilers.gcc.4_2
 lSLF07#2@37"Precompile database_iphone_Prefix.pch318024507#318024508#0(0"0(0#0#69"/Users/maxsilver/Documents/database-iphone/database_iphone_Prefix.pch8632499808#1998"    cd /Users/maxsilver/Documents/database-iphone    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-generated-files.hmap -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-own-target-headers.hmap -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-all-target-headers.hmap -iquote /Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/database-iphone-project-headers.hmap -F/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator -I/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/include -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/DerivedSources/i386 -I/Users/maxsilver/Documents/database-iphone/build/database-iphone.build/Debug-iphonesimulator/database-iphone.build/DerivedSources -c /Users/maxsilver/Documents/database-iphone/database_iphone_Prefix.pch -o /var/folders/yd/ydeuU3HUF18Vh0jwGx5LCk+++TI/-Caches-/com.apple.Xcode.501/SharedPrecompiledHeaders/database_iphone_Prefix-hhbczrhmrzaisidqikbsgohwhpdb/database_iphone_Prefix.pch.gch0#
 
 CTouch /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app
-s318029027.970790
-e318029027.973642
+s318034493.981477
+e318034493.984135
 r1
 xTouch
 x/Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app
-lSLF07#2@96"Touch /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app318029027#318029027#0(0"0(0#0#0"8632615680#294"    cd /Users/maxsilver/Documents/database-iphone    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app0#
+lSLF07#2@96"Touch /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app318034493#318034493#0(0"0(0#0#0"8632152672#294"    cd /Users/maxsilver/Documents/database-iphone    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/maxsilver/Documents/database-iphone/build/Debug-iphonesimulator/database-iphone.app0#
 

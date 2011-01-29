@@ -48,6 +48,14 @@
 
 }
 
+- (void)loadView {
+	NSLog(@"Load View");
+	[super loadView];
+	
+	sBar = [[UISearchBar alloc]initWithFrame:CGRectMake(0,0,320,30)];
+	sBar.delegate = self;
+	self.tableView.tableHeaderView = sBar;
+}
 
 
 - (void)viewDidLoad {
@@ -62,6 +70,74 @@
 	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+
+
+#pragma mark UISearchBarDelegate
+-(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+	sBar.showsCancelButton = YES;
+	sBar.autocorrectionType = UITextAutocorrectionTypeNo;
+	// flush previous search content
+	[displayedObjectsForCharacters removeAllObjects];
+}
+
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+	sBar.showsCancelButton = NO;
+}
+
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+	[displayedObjectsForCharacters removeAllObjects]; //remove all data that belongs to previous search
+	if([searchText isEqualToString:@""] || searchText==nil){
+		[self.tableView reloadData];
+		return;
+	}
+	
+	NSString *charKey = nil;
+	for(charKey in objectsForCharacters){
+
+		for(NSArray *names in [objectsForCharacters objectForKey: charKey]){
+			for(NSString *name in names){
+				NSAutoreleasePool *pool = [[NSAutoreleasePool alloc]init];
+				NSRange r = [name rangeOfString:searchText];
+				if(r.location != NSNotFound){
+					if(r.location == 0){
+						NSMutableArray *matchingNames = [displayedObjectsForCharacters objectForKey: charKey];
+						if(matchingNames == nil){
+							matchingNames = [[NSMutableArray alloc]init];
+							[displayedObjectsForCharacters setObject:matchingNames forKey:[NSString stringWithFormat:@"%c",charKey]];
+						}
+						[matchingNames addObject:name];
+					}
+				}
+				[pool release];
+			}
+				
+		}
+	}
+	[self.tableView reloadData];
+	
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar*)searchBar {
+	// if a valid search was entered but the user wanted to cancel, bring back the main list content
+	[displayedObjectsForCharacters removeAllObjects];
+	[displayedObjectsForCharacters 
+	[displayedObjectsForCharacters addObjectsFromArray:[objectsForCharacters allValues]];
+	displayedObjectsForCharacters = objectsForCharacters;
+	@try{
+		[self.tableView reloadData];
+	}
+	@catch(NSException *e){
+		NSLog(@"Caught exception when cancelling search bar");
+	}
+	[sBar resignFirstResponder];
+	sBar.text = @"";
+}
+
+// called when search (in our case "Done") button pressed
+- (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+	[searchBar resignFirstResponder]; 
 }
 
 /*
