@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
+#import "database_iphoneAppDelegate.h"
 
 @interface RootViewController : UITableViewController {
+	NSMutableArray *tableData;
 }
 
 @end

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 
 @interface database_iphoneAppDelegate : NSObject <UIApplicationDelegate> {
     
-    UIWindow *window;
-    UINavigationController *navigationController;
+   IBOutlet UIWindow *window;
+   IBOutlet UINavigationController *navigationController;
 }
 
 @property (nonatomic, retain) IBOutlet UIWindow *window;

@@ -15,14 +15,39 @@
 #pragma mark -
 #pragma mark View lifecycle
 
-/*
+
+-(void)initializeTableData
+{
+	NSLog(@"Init Table Data");
+	sqlite3 *db = [database_iphoneAppDelegate getNewDBConnection];
+	sqlite3_stmt *statement = nil;
+	const char *sql = "select * from user";
+	if(sqlite3_prepare_v2(db, sql, -1, &statement, NULL) != SQLITE_OK)
+		NSAssert1(0, @"Error preparing statement", sqlite3_errmsg(db));
+	else {
+		while (sqlite3_step(statement) == SQLITE_ROW) {
+			[tableData addObject:[NSString stringWithFormat:@"%s",(char*)sqlite3_column_text(statement, 1)]];
+		}
+	}
+	sqlite3_finalize(statement);
+	NSLog(@"Init Table Success!");
+}
+
+
+
 - (void)viewDidLoad {
+	NSLog(@"View Loading");
     [super viewDidLoad];
 
+	tableData = [[NSMutableArray alloc]init]; //init the array
+	[self initializeTableData];
+	self.title = @"DatabaseTest";
+	
+	NSLog(@"View did load!!");
+	
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-*/
 
 /*
 - (void)viewWillAppear:(BOOL)animated {
@@ -65,13 +90,28 @@
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+	NSLog(@"Returned a row count");
+    return [tableData count];
 }
 
 
 // Customize the appearance of table view cells.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+	NSLog(@"Making a cell");
+	static NSString *MyIdentifier = @"MyIdentifier";
+	
+	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
+	if (cell == nil){
+		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:MyIdentifier] autorelease];
+	}
+	
+	cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+	NSLog(@"Sending back a cell");	
+	
+	return cell;
+
+	/*
     static NSString *CellIdentifier = @"Cell";
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
@@ -82,6 +122,7 @@
 	// Configure the cell.
 
     return cell;
+	*/
 }
 
 
