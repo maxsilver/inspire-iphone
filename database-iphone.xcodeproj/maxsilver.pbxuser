@@ -1,0 +1,66 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* database-iphone */ = {
+		activeExec = 0;
+		executables = (
+			BB51C2F712F4A692002CDB6C /* database-iphone */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = BB51C2F712F4A692002CDB6C /* database-iphone */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* database-iphone */;
+		codeSenseManager = BB51C30512F4A6B1002CDB6C /* Code sense */;
+		executables = (
+			BB51C2F712F4A692002CDB6C /* database-iphone */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 318023314;
+			PBXWorkspaceStateSaveDate = 318023314;
+		};
+		sourceControlManager = BB51C30412F4A6B1002CDB6C /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	BB51C2F712F4A692002CDB6C /* database-iphone */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = "database-iphone";
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	BB51C30412F4A6B1002CDB6C /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	BB51C30512F4A6B1002CDB6C /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
