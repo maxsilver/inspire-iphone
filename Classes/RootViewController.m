@@ -18,19 +18,34 @@
 
 -(void)initializeTableData
 {
-	NSLog(@"Init Table Data");
+	arrayOfCharacters = [[NSMutableArray alloc]init];
+	objectsForCharacters = [[NSMutableDictionary alloc]init];
 	sqlite3 *db = [database_iphoneAppDelegate getNewDBConnection];
-	sqlite3_stmt *statement = nil;
-	const char *sql = "select * from user";
-	if(sqlite3_prepare_v2(db, sql, -1, &statement, NULL) != SQLITE_OK)
-		NSAssert1(0, @"Error preparing statement", sqlite3_errmsg(db));
-	else {
-		while (sqlite3_step(statement) == SQLITE_ROW) {
-			[tableData addObject:[NSString stringWithFormat:@"%s",(char*)sqlite3_column_text(statement, 1)]];
+	for(char c='A';c<='Z';c++)
+	{
+		NSMutableString *query;
+		query = [NSMutableString stringWithFormat:@"select name from user where name LIKE '%c",c]; 
+		[query appendString:@"%'"];
+		char *sql = [query cString];
+		sqlite3_stmt *statement = nil;
+		
+		if(sqlite3_prepare_v2(db,sql, -1, &statement, NULL)!= SQLITE_OK)
+			NSAssert1(0,@"error preparing statement",sqlite3_errmsg(db));
+		else
+		{
+			NSMutableArray *arrayOfNames = [[NSMutableArray alloc]init];
+			while(sqlite3_step(statement)==SQLITE_ROW)
+				[arrayOfNames addObject:[NSString stringWithFormat:(NSString *)@"%s",(char*)sqlite3_column_text(statement, 0)]];
+			if([arrayOfNames count] >0)
+			{
+				[arrayOfCharacters addObject:[NSString stringWithFormat:@"%c",c]];
+				[objectsForCharacters setObject:arrayOfNames forKey:[NSString stringWithFormat:@"%c",c]];
+			}
+			[arrayOfNames release];
 		}
+		sqlite3_finalize(statement);
 	}
-	sqlite3_finalize(statement);
-	NSLog(@"Init Table Success!");
+
 }
 
 
@@ -39,7 +54,7 @@
 	NSLog(@"View Loading");
     [super viewDidLoad];
 
-	tableData = [[NSMutableArray alloc]init]; //init the array
+
 	[self initializeTableData];
 	self.title = @"DatabaseTest";
 	
@@ -84,15 +99,47 @@
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [arrayOfCharacters count];
 }
 
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	NSLog(@"Returned a row count");
-    return [tableData count];
+	return [[objectsForCharacters objectForKey:[arrayOfCharacters objectAtIndex:section]] count];
 }
+
+
+// ----------------
+
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+	NSMutableArray *toBeReturned = [[NSMutableArray alloc]init];
+	for(char c = 'A';c<='Z';c++)
+		[toBeReturned addObject:[NSString stringWithFormat:@"%c",c]];
+	return toBeReturned;
+	
+}
+- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+	NSInteger count = 0;
+	for(NSString *character in arrayOfCharacters)
+	{
+		if([character isEqualToString:title])
+			return count;
+		count ++;
+	}
+	return 0;// in case of some eror donot crash d application
+	
+}
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+	if([arrayOfCharacters count]==0)
+		return @"";
+	return [arrayOfCharacters objectAtIndex:section];
+}
+		
+
+
+// -----------------------
 
 
 // Customize the appearance of table view cells.
@@ -106,7 +153,8 @@
 		cell = [[[UITableViewCell alloc] initWithFrame:CGRectZero reuseIdentifier:MyIdentifier] autorelease];
 	}
 	
-	cell.textLabel.text = [tableData objectAtIndex:indexPath.row];
+	// Set up the cell
+	cell.textLabel.text = [[objectsForCharacters objectForKey:[arrayOfCharacters objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
 	NSLog(@"Sending back a cell");	
 	
 	return cell;

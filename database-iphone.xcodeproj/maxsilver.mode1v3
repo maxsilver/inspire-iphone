@@ -265,11 +265,14 @@
 							<array>
 								<string>29B97314FDCFA39411CA2CEA</string>
 								<string>080E96DDFE201D6D7F000001</string>
+								<string>29B97315FDCFA39411CA2CEA</string>
+								<string>29B97317FDCFA39411CA2CEA</string>
 								<string>1C37FABC05509CD000000102</string>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
+									<integer>5</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -294,7 +297,7 @@
 							<real>163</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>4 55 1276 723 0 0 1280 778 </string>
+						<string>3 55 1276 723 0 0 1280 778 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -312,7 +315,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>RootViewController.m</string>
+								<string>database_iphoneAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -320,17 +323,18 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>RootViewController.m</string>
+										<string>database_iphoneAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>BB51C36F12F4B168002CDB6C</string>
+										<string>BB51C3CC12F4BCE4002CDB6C</string>
 										<key>history</key>
 										<array>
-											<string>BB51C36112F4B138002CDB6C</string>
-											<string>BB51C36212F4B138002CDB6C</string>
-											<string>BB51C36312F4B138002CDB6C</string>
-											<string>BB51C36412F4B138002CDB6C</string>
+											<string>BB51C3A312F4BA7A002CDB6C</string>
+											<string>BB51C3A412F4BA7A002CDB6C</string>
+											<string>BB51C3A512F4BA7A002CDB6C</string>
+											<string>BB51C3AE12F4BB28002CDB6C</string>
+											<string>BB51C3AF12F4BB28002CDB6C</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -344,7 +348,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {1091, 561}}</string>
 								<key>RubberWindowFrame</key>
-								<string>4 55 1276 723 0 0 1280 778 </string>
+								<string>3 55 1276 723 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -364,7 +368,7 @@
 								<key>Frame</key>
 								<string>{{0, 566}, {1091, 116}}</string>
 								<key>RubberWindowFrame</key>
-								<string>4 55 1276 723 0 0 1280 778 </string>
+								<string>3 55 1276 723 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -528,17 +532,16 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>BB51C37012F4B168002CDB6C</string>
 		<string>BB51C36C12F4B15C002CDB6C</string>
 		<string>BB51C36A12F4B138002CDB6C</string>
 		<string>1C530D57069F1CE1000CFCEE</string>
 		<string>1CD10A99069EF8BA00B06720</string>
-		<string>BB51C34B12F4AF7E002CDB6C</string>
 		<string>1C78EAAD065D492600B07095</string>
+		<string>BB51C34B12F4AF7E002CDB6C</string>
 		<string>/Users/maxsilver/Documents/database-iphone/database-iphone.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>4 55 1276 723 0 0 1280 778 </string>
+	<string>3 55 1276 723 0 0 1280 778 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>
@@ -559,7 +562,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CD0528F0623707200166675</string>
 								<key>PBXProjectModuleLabel</key>
-								<string></string>
+								<string>RootViewController.m</string>
 								<key>StatusBarVisibility</key>
 								<true/>
 							</dict>
@@ -568,7 +571,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {851, 325}}</string>
 								<key>RubberWindowFrame</key>
-								<string>429 56 851 722 0 0 1280 778 </string>
+								<string>1283 1079 851 722 1280 121 1200 1920 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -594,7 +597,7 @@
 								<key>Frame</key>
 								<string>{{0, 330}, {851, 351}}</string>
 								<key>RubberWindowFrame</key>
-								<string>429 56 851 722 0 0 1280 778 </string>
+								<string>1283 1079 851 722 1280 121 1200 1920 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXBuildResultsModule</string>
@@ -626,7 +629,7 @@
 			<key>WindowContentMinSize</key>
 			<string>486 300</string>
 			<key>WindowString</key>
-			<string>429 56 851 722 0 0 1280 778 </string>
+			<string>1283 1079 851 722 1280 121 1200 1920 </string>
 			<key>WindowToolGUID</key>
 			<string>BB51C34B12F4AF7E002CDB6C</string>
 			<key>WindowToolIsVisible</key>

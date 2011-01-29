@@ -11,7 +11,9 @@
 #import "database_iphoneAppDelegate.h"
 
 @interface RootViewController : UITableViewController {
-	NSMutableArray *tableData;
+//	NSMutableArray *tableData;
+	NSMutableArray *arrayOfCharacters;
+	NSMutableDictionary *objectsForCharacters;
 }
 
 @end
