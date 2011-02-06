@@ -20,32 +20,37 @@
 {
 	arrayOfCharacters = [[NSMutableArray alloc]init];
 	objectsForCharacters = [[NSMutableDictionary alloc]init];
+  
+  displayedArrayOfCharacters = [[NSMutableArray alloc]init];
+  displayedObjectsForCharacters = [[NSMutableDictionary alloc]init];
+
 	sqlite3 *db = [database_iphoneAppDelegate getNewDBConnection];
-	for(char c='A';c<='Z';c++)
-	{
+	for(char c='A';c<='Z';c++){
 		NSMutableString *query;
 		query = [NSMutableString stringWithFormat:@"select name from user where name LIKE '%c",c]; 
 		[query appendString:@"%'"];
 		char *sql = [query cString];
 		sqlite3_stmt *statement = nil;
 		
-		if(sqlite3_prepare_v2(db,sql, -1, &statement, NULL)!= SQLITE_OK)
+		if(sqlite3_prepare_v2(db,sql, -1, &statement, NULL)!= SQLITE_OK){
 			NSAssert1(0,@"error preparing statement",sqlite3_errmsg(db));
-		else
-		{
+    } else {
 			NSMutableArray *arrayOfNames = [[NSMutableArray alloc]init];
-			while(sqlite3_step(statement)==SQLITE_ROW)
+			while(sqlite3_step(statement)==SQLITE_ROW){
 				[arrayOfNames addObject:[NSString stringWithFormat:(NSString *)@"%s",(char*)sqlite3_column_text(statement, 0)]];
-			if([arrayOfNames count] >0)
-			{
-				[arrayOfCharacters addObject:[NSString stringWithFormat:@"%c",c]];
+      }
+      
+			if([arrayOfNames count] > 0){
+        [arrayOfCharacters addObject:[NSString stringWithFormat:@"%c",c]];
 				[objectsForCharacters setObject:arrayOfNames forKey:[NSString stringWithFormat:@"%c",c]];
 			}
 			[arrayOfNames release];
 		}
+    
 		sqlite3_finalize(statement);
 	}
-
+  [displayedArrayOfCharacters addObjectsFromArray:arrayOfCharacters];
+  [displayedObjectsForCharacters addEntriesFromDictionary:objectsForCharacters];
 }
 
 - (void)loadView {
@@ -80,6 +85,8 @@
 	sBar.autocorrectionType = UITextAutocorrectionTypeNo;
 	// flush previous search content
 	[displayedObjectsForCharacters removeAllObjects];
+  [displayedObjectsForCharacters addEntriesFromDictionary:objectsForCharacters];
+  NSLog(@"begin edit, added all");
 }
 
 -(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
@@ -87,31 +94,33 @@
 }
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+  [displayedArrayOfCharacters removeAllObjects];
 	[displayedObjectsForCharacters removeAllObjects]; //remove all data that belongs to previous search
+  NSLog(@"text changed, search and add");
 	if([searchText isEqualToString:@""] || searchText==nil){
+    [displayedArrayOfCharacters addObjectsFromArray:arrayOfCharacters];
+    [displayedObjectsForCharacters addEntriesFromDictionary:objectsForCharacters];
 		[self.tableView reloadData];
 		return;
 	}
-	
-	NSString *charKey = nil;
-	for(charKey in objectsForCharacters){
 
-		for(NSArray *names in [objectsForCharacters objectForKey: charKey]){
-			for(NSString *name in names){
-				NSAutoreleasePool *pool = [[NSAutoreleasePool alloc]init];
-				NSRange r = [name rangeOfString:searchText];
-				if(r.location != NSNotFound){
-					if(r.location == 0){
-						NSMutableArray *matchingNames = [displayedObjectsForCharacters objectForKey: charKey];
-						if(matchingNames == nil){
-							matchingNames = [[NSMutableArray alloc]init];
-							[displayedObjectsForCharacters setObject:matchingNames forKey:[NSString stringWithFormat:@"%c",charKey]];
-						}
-						[matchingNames addObject:name];
-					}
-				}
-				[pool release];
-			}
+	for(NSString *charKey in objectsForCharacters){
+		for(NSString *name in [objectsForCharacters valueForKey: charKey]){
+      NSAutoreleasePool *pool = [[NSAutoreleasePool alloc]init];
+      NSRange r = [name rangeOfString:searchText];
+      if(r.location != NSNotFound){
+        if(r.location == 0){
+          NSMutableArray *matchingNames = [displayedObjectsForCharacters objectForKey: charKey];
+          if(matchingNames == nil){
+            matchingNames = [[NSMutableArray alloc]init];
+            [displayedArrayOfCharacters addObject:charKey];
+          }
+          [matchingNames addObject:name];
+          NSLog(@"Matched %@ for %@", name, charKey);
+          [displayedObjectsForCharacters setObject:matchingNames forKey:charKey]; 
+        }
+      }
+      [pool release];
 				
 		}
 	}
@@ -121,10 +130,11 @@
 
 -(void)searchBarCancelButtonClicked:(UISearchBar*)searchBar {
 	// if a valid search was entered but the user wanted to cancel, bring back the main list content
+  [displayedArrayOfCharacters removeAllObjects];
 	[displayedObjectsForCharacters removeAllObjects];
-	[displayedObjectsForCharacters 
-	[displayedObjectsForCharacters addObjectsFromArray:[objectsForCharacters allValues]];
-	displayedObjectsForCharacters = objectsForCharacters;
+  
+  [displayedArrayOfCharacters addObjectsFromArray:arrayOfCharacters];
+  [displayedObjectsForCharacters addEntriesFromDictionary:objectsForCharacters];
 	@try{
 		[self.tableView reloadData];
 	}
@@ -175,14 +185,14 @@
 
 // Customize the number of sections in the table view.
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return [arrayOfCharacters count];
+    return [displayedArrayOfCharacters count];
 }
 
 
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	NSLog(@"Returned a row count");
-	return [[objectsForCharacters objectForKey:[arrayOfCharacters objectAtIndex:section]] count];
+	return [[displayedObjectsForCharacters objectForKey:[displayedArrayOfCharacters objectAtIndex:section]] count];
 }
 
 
@@ -198,7 +208,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
 	NSInteger count = 0;
-	for(NSString *character in arrayOfCharacters)
+	for(NSString *character in displayedArrayOfCharacters)
 	{
 		if([character isEqualToString:title])
 			return count;
@@ -208,9 +218,9 @@
 	
 }
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	if([arrayOfCharacters count]==0)
+	if([displayedArrayOfCharacters count]==0)
 		return @"";
-	return [arrayOfCharacters objectAtIndex:section];
+	return [displayedArrayOfCharacters objectAtIndex:section];
 }
 		
 
@@ -230,7 +240,7 @@
 	}
 	
 	// Set up the cell
-	cell.textLabel.text = [[objectsForCharacters objectForKey:[arrayOfCharacters objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
+	cell.textLabel.text = [[displayedObjectsForCharacters objectForKey:[displayedArrayOfCharacters objectAtIndex:indexPath.section]] objectAtIndex:indexPath.row];
 	NSLog(@"Sending back a cell");	
 	
 	return cell;
